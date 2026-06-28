@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>学习助手 - 大学生服务平台</title>
+    <link rel="manifest" href="manifest.json">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="学习助手">
+    <link rel="apple-touch-icon" href="icon-192.png">
+    <meta name="theme-color" content="#080818">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         html { scroll-behavior: smooth; }
@@ -1298,6 +1304,17 @@ function fallbackCopy(text) {
     document.execCommand('copy');
     document.body.removeChild(ta);
     showToast('微信号已复制：' + text, 'success');
+}
+
+// ===== PWA: Register Service Worker =====
+if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+        navigator.serviceWorker.register('sw.js').then(reg => {
+            console.log('SW registered:', reg.scope);
+        }).catch(err => {
+            console.log('SW registration failed:', err);
+        });
+    });
 }
 
 </script>
