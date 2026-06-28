@@ -533,6 +533,17 @@
             background: rgba(100, 100, 255, 0.1);
             border-radius: 10px;
         }
+        .promise-badge {
+            text-align: center;
+            margin-top: 24px;
+            padding: 14px 20px;
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.08), rgba(167, 139, 250, 0.08));
+            border: 1px solid rgba(100, 100, 255, 0.12);
+            border-radius: 12px;
+            color: #8888cc;
+            font-size: 14px;
+            line-height: 1.6;
+        }
 
         /* Toast */
         .toast {
@@ -700,37 +711,6 @@
             padding: 0 24px 18px;
         }
 
-        /* Privacy Promise */
-        .promise-banner {
-            background: linear-gradient(135deg, rgba(102, 126, 234, 0.08), rgba(167, 139, 250, 0.08));
-            border: 1px solid rgba(100, 100, 255, 0.12);
-            border-radius: 20px;
-            padding: 50px 40px;
-            text-align: center;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        .promise-banner .promise-icon {
-            font-size: 48px;
-            margin-bottom: 16px;
-            filter: drop-shadow(0 4px 12px rgba(102, 126, 234, 0.3));
-        }
-        .promise-banner h3 {
-            font-size: 22px;
-            font-weight: 700;
-            margin-bottom: 12px;
-            background: linear-gradient(135deg, #667eea, #a78bfa);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        .promise-banner p {
-            color: #8888bb;
-            font-size: 15px;
-            line-height: 1.8;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
         /* Floating Buttons */
         .float-btns {
             position: fixed;
@@ -807,7 +787,7 @@
                 backdrop-filter: blur(20px);
             }
             .nav-links.show { display: flex; }
-            .nav-links li a { padding: 12px 16px; }
+            .nav-links li a { padding: 10px 16px; font-size: 13px; }
             .nav-links li a::before { display: none; }
             .menu-toggle { display: flex; }
             .hero h1 { font-size: 34px; }
@@ -820,8 +800,7 @@
             .float-btns { bottom: 20px; right: 20px; }
             .float-btn { width: 46px; height: 46px; font-size: 18px; }
             .float-btn .tooltip { display: none; }
-            .promise-banner { padding: 30px 20px; }
-            .promise-banner .promise-icon { font-size: 36px; }
+            .promise-badge { font-size: 12px; padding: 10px 14px; }
         }
         @media (max-width: 480px) {
             .hero h1 { font-size: 28px; }
@@ -979,15 +958,6 @@
     </div>
 </section>
 
-<!-- Privacy Promise -->
-<section id="promise" class="section" style="min-height:auto;padding-top:40px;padding-bottom:60px;">
-    <div class="promise-banner fade-in">
-        <div class="promise-icon">&#x1F512;</div>
-        <h3>隐私安全保障</h3>
-        <p>我们严格保密每一位客户的个人信息和学业资料，绝不向任何第三方泄露。<br>服务完成后不保留任何资料，让您全程无忧。</p>
-    </div>
-</section>
-
 <!-- Cases -->
 <section id="cases" class="section">
     <h2 class="section-title">成功案例</h2>
@@ -1040,6 +1010,9 @@
                 <span class="emoji">&#x26A0;&#xFE0F;</span>
                 <span>下单请直接联系微信或QQ，沟通需求后报价</span>
             </div>
+        </div>
+        <div class="promise-badge">
+            &#x1F512; 严格保密个人信息，绝不外泄，完成后不保留任何资料
         </div>
     </div>
 </section>
